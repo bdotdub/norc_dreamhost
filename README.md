@@ -48,12 +48,14 @@ You can skip the *Start up Django development enviroment* steps because it is ha
 
 Since Norc is running under Passenger, it should be up and running if you go to `http://norc.example.com`. However, whenever you make a change in `passenger_wsgi.py` or the Norc codebase, you'll have to restart it by running the following:
 
-    `$ mkdir -p tmp`
-    `$ touch tmp/restart.txt`
+    $ mkdir -p tmp
+    $ touch tmp/restart.txt
 
 ### Running a Norc daemon
 
 I believe Dreamhost may kill daemons at any time, so to have a daemon run, you may want to start a `screen` session and start it there
+
+    $ tmsd --region MY_REGION
 
 ## Resources
 
@@ -61,7 +63,7 @@ I believe Dreamhost may kill daemons at any time, so to have a daemon run, you m
 * [Norc Install](http://github.com/darrellsilver/norc/blob/master/INSTALL.md)
 * [GNU Screen Manual](http://www.gnu.org/software/screen/manual/screen.html)
 
-### Dreamhost
+#### Dreamhost
 
 * [Python on Dreamhost](http://wiki.dreamhost.com/Python)
 * [Passenger WSGI](http://wiki.dreamhost.com/Passenger_WSGI)
